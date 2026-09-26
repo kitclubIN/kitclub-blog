@@ -1,0 +1,69 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  pubDate?: Date | string;
+  updatedDate?: Date | string;
+  heroImage?: string;
+  category?: string;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  category = "Football Culture",
+} = Astro.props;
+
+const formatDate = (value?: Date | string) => {
+  if (!value) return "";
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+
+  return new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(date);
+};
+---
+
+<article class="article-page">
+  <header class="article-header">
+    <div class="article-container">
+      <a href="/blog/" class="article-back">← Back to Journal</a>
+
+      <div class="article-category">{category}</div>
+
+      <h1>{title}</h1>
+
+      {description && (
+        <p class="article-dek">{description}</p>
+      )}
+
+      {(pubDate || updatedDate) && (
+        <div class="article-meta">
+          {pubDate && <span>{formatDate(pubDate)}</span>}
+          {updatedDate && (
+            <>
+              <span class="meta-separator">·</span>
+              <span>Updated {formatDate(updatedDate)}</span>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+
+    {heroImage && (
+      <div class="article-hero">
+        <img src={heroImage} alt={title} />
+      </div>
+    )}
+  </header>
+
+  <div class="article-container article-content">
+    <slot />
+  </div>
+</article>

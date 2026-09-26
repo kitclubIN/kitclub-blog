@@ -1,0 +1,46 @@
+---
+const articles = Object.entries(
+  import.meta.glob("../content/blog/*.{md,mdx}", {
+    eager: true,
+  })
+)
+  .map(([path, module]: [string, any]) => ({
+    slug: path.split("/").pop()?.replace(/\.(md|mdx)$/, ""),
+    ...module.frontmatter,
+  }))
+  .filter((article) => article.title)
+  .sort(
+    (a, b) =>
+      new Date(b.pubDate || 0).getTime() -
+      new Date(a.pubDate || 0).getTime()
+  );
+---
+
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>KITCLUB Journal</title>
+
+    <meta
+      name="description"
+      content="Football jersey guides, buying advice, version comparisons, sizing and football culture from KITCLUB."
+    />
+
+    <link rel="canonical" href="https://www.kitclub.in/blog/" />
+
+    <meta
+      http-equiv="refresh"
+      content="0;url=/blog/"
+    />
+  </head>
+
+  <body>
+    <p>
+      Redirecting to
+      <a href="/blog/">KITCLUB Journal</a>...
+    </p>
+  </body>
+</html>
