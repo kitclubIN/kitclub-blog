@@ -160,18 +160,6 @@ const articles = Object.entries(modules)
           </button>
         </div>
 
-        <a
-          href="https://www.kitclub.in/shop/cart"
-          class="mobile-cart"
-          aria-label="Cart"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6" />
-            <circle cx="10" cy="20" r="1.2" />
-            <circle cx="18" cy="20" r="1.2" />
-          </svg>
-        </a>
-
         <button
           class="mobile-menu-button"
           type="button"
@@ -190,7 +178,6 @@ const articles = Object.entries(modules)
       <button class="mobile-menu-backdrop" type="button" aria-label="Close menu"></button>
       <aside class="mobile-menu-drawer" aria-label="Mobile navigation">
         <div class="mobile-menu-top">
-          <button class="mobile-menu-close" type="button" aria-label="Close menu">×</button>
           <form class="mobile-search" action="https://www.kitclub.in/shop" method="get">
             <label class="sr-only" for="mobile-search-input">Search KITCLUB</label>
             <input id="mobile-search-input" name="search" type="search" placeholder="Search..." />
@@ -201,23 +188,15 @@ const articles = Object.entries(modules)
               </svg>
             </button>
           </form>
+          <button class="mobile-menu-close" type="button" aria-label="Close menu">×</button>
         </div>
 
         <nav class="mobile-menu-links" aria-label="Mobile navigation links">
           <a href="https://www.kitclub.in/shop">Shop All</a>
-          <a href="https://www.kitclub.in/shop"><span>Shop By club</span><span class="mobile-menu-arrow" aria-hidden="true">›</span></a>
-          <a href="https://www.kitclub.in/shop/category/national-kits"><span>Shop By Country</span><span class="mobile-menu-arrow" aria-hidden="true">›</span></a>
           <a href="https://www.kitclub.in/contactus">Contact Us</a>
+          <a href="https://chat.whatsapp.com/F7knZUObUaGFBvZosMC4Cu" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://www.instagram.com/kitclub.in" target="_blank" rel="noopener noreferrer">Instagram</a>
         </nav>
-
-        <div class="mobile-menu-socials">
-          <a href="https://chat.whatsapp.com/F7knZUObUaGFBvZosMC4Cu" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a8.7 8.7 0 0 0-7.5 13.2L3 21l4.9-1.5A8.7 8.7 0 1 0 12 3Z" /><path d="M8.6 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.4 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.8c.2.1.3.3.2.5-.2.8-.9 1.4-1.8 1.5-1.2.1-3.2-1-4.7-2.5-1.5-1.5-2.5-3.5-2.4-4.7.1-.8.7-1.5 1.6-1.7Z" /></svg>
-          </a>
-          <a href="https://www.instagram.com/kitclub.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.4" cy="6.7" r="1" class="filled" /></svg>
-          </a>
-        </div>
 
         <a class="mobile-sign-in" href="https://www.kitclub.in/web/login">Sign in</a>
       </aside>
@@ -356,27 +335,25 @@ const articles = Object.entries(modules)
           </a>
         </div>
       </div>
-      </div>
 
-      <div class="mobile-footer">
-        <div class="mobile-footer-column">
-          <h3>Shop</h3><a href="https://www.kitclub.in/shop">All Jerseys</a><a href="https://www.kitclub.in/shop">New Season</a><a href="https://www.kitclub.in/shop">Player Version</a><a href="https://www.kitclub.in/shop">Master Version</a>
-        </div>
-        <div class="mobile-footer-column">
-          <h3>Support</h3><a href="https://www.kitclub.in/contactus">Contact Us</a><a href="https://www.kitclub.in/shipping-policy">Shipping Policy</a><a href="https://www.kitclub.in/returns-exchanges">Returns & Exchanges</a><a href="https://www.kitclub.in/faq">FAQ</a>
-        </div>
-        <div class="mobile-footer-column">
-          <h3>Legal</h3><a href="https://www.kitclub.in/privacy">Privacy Policy</a><a href="https://www.kitclub.in/terms">Terms & Conditions</a>
-        </div>
+      <div class="mobile-footer-extras">
         <p class="footer-shipping">*Free Shipping above ₹1500</p>
-        <div class="payment-methods" aria-label="Accepted payment methods"><span class="payment-logo amex">AM<br />EX</span><span class="payment-logo visa">VISA</span><span class="payment-logo mastercard"><i></i><i></i></span><span class="payment-logo rupay">RuPay</span><span class="payment-logo upi">UPI</span></div>
-        <div class="mobile-footer-socials">
-          <a href="https://www.instagram.com/kitclub.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.4" cy="6.7" r="1" class="filled" /></svg></a>
-          <a href="https://chat.whatsapp.com/F7knZUObUaGFBvZosMC4Cu" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a8.7 8.7 0 0 0-7.5 13.2L3 21l4.9-1.5A8.7 8.7 0 1 0 12 3Z" /><path d="M8.6 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.5 1 1.3 1.8 2.4 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.8c.2.1.3.3.2.5-.2.8-.9 1.4-1.8 1.5-1.2.1-3.2-1-4.7-2.5-1.5-1.5-2.5-3.5-2.4-4.7.1-.8.7-1.5 1.6-1.7Z" /></svg></a>
+        <div class="payment-methods" aria-label="Accepted payment methods">
+          <span class="payment-logo amex">AM<br />EX</span>
+          <span class="payment-logo visa">VISA</span>
+          <span class="payment-logo mastercard"><i></i><i></i></span>
+          <span class="payment-logo rupay">RuPay</span>
+          <span class="payment-logo upi">UPI</span>
         </div>
-        <div class="mobile-footer-brand"><img src="https://www.kitclub.in/web/image/website/1/logo/KITCLUB?unique=faab563" alt="KITCLUB" width="95" height="40" /><p>Football jerseys, done right.</p><a href="mailto:support@kitclub.in">support@kitclub.in</a></div>
-        <p class="mobile-copyright">©2026 KITCLUB. All Rights Reserved</p>
-        <div class="footer-cookie-links"><a href="https://www.kitclub.in/cookie-policy">Cookie Policy</a><span aria-hidden="true">•</span><a href="https://www.kitclub.in/cookie-preferences">Update Cookie Preferences</a></div>
+        <div class="footer-social-icons">
+          <a href="https://chat.whatsapp.com/F7knZUObUaGFBvZosMC4Cu" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+          <a href="https://www.instagram.com/kitclub.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+        </div>
+        <div class="footer-cookie-links">
+          <a href="https://www.kitclub.in/cookie-policy">Cookie Policy</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://www.kitclub.in/cookie-preferences">Update Cookie Preferences</a>
+        </div>
       </div>
     </footer>
 
