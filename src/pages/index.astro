@@ -31,6 +31,10 @@ const articles = Object.entries(modules)
   });
 ---
 
+<style is:global>
+  @import "../styles/global.css";
+</style>
+
 <!doctype html>
 <html lang="en-IN">
   <head>
@@ -156,13 +160,47 @@ const articles = Object.entries(modules)
           </button>
         </div>
 
-        <button class="mobile-menu-button" type="button" aria-label="Open menu">
+        <button
+          class="mobile-menu-button"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
     </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <button class="mobile-menu-backdrop" type="button" aria-label="Close menu"></button>
+      <aside class="mobile-menu-drawer" aria-label="Mobile navigation">
+        <div class="mobile-menu-top">
+          <form class="mobile-search" action="https://www.kitclub.in/shop" method="get">
+            <label class="sr-only" for="mobile-search-input">Search KITCLUB</label>
+            <input id="mobile-search-input" name="search" type="search" placeholder="Search..." />
+            <button type="submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.8" />
+                <path d="m16 16 5 5" />
+              </svg>
+            </button>
+          </form>
+          <button class="mobile-menu-close" type="button" aria-label="Close menu">×</button>
+        </div>
+
+        <nav class="mobile-menu-links" aria-label="Mobile navigation links">
+          <a href="https://www.kitclub.in/shop">Shop All</a>
+          <a href="https://www.kitclub.in/contactus">Contact Us</a>
+          <a href="https://chat.whatsapp.com/F7knZUObUaGFBvZosMC4Cu" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://www.instagram.com/kitclub.in" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+
+        <a class="mobile-sign-in" href="https://www.kitclub.in/web/login">Sign in</a>
+      </aside>
+    </div>
 
     <main>
       <section class="journal-hero">
@@ -296,6 +334,58 @@ const articles = Object.entries(modules)
           </a>
         </div>
       </div>
+
+      <div class="mobile-footer-extras">
+        <p class="footer-shipping">*Free Shipping above ₹1500</p>
+        <div class="payment-methods" aria-label="Accepted payment methods">
+          <span class="payment-logo amex">AM<br />EX</span>
+          <span class="payment-logo visa">VISA</span>
+          <span class="payment-logo mastercard"><i></i><i></i></span>
+          <span class="payment-logo rupay">RuPay</span>
+          <span class="payment-logo upi">UPI</span>
+        </div>
+        <div class="footer-social-icons">
+          <a href="https://chat.whatsapp.com/F7knZUObUaGFBvZosMC4Cu" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+          <a href="https://www.instagram.com/kitclub.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+        </div>
+        <div class="footer-cookie-links">
+          <a href="https://www.kitclub.in/cookie-policy">Cookie Policy</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://www.kitclub.in/cookie-preferences">Update Cookie Preferences</a>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      const menu = document.querySelector('.mobile-menu');
+      const openButton = document.querySelector('.mobile-menu-button');
+      const closeButton = document.querySelector('.mobile-menu-close');
+      const backdrop = document.querySelector('.mobile-menu-backdrop');
+      const menuLinks = document.querySelectorAll('.mobile-menu-links a, .mobile-sign-in');
+
+      const closeMenu = () => {
+        menu?.classList.remove('is-open');
+        menu?.setAttribute('aria-hidden', 'true');
+        openButton?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('mobile-menu-open');
+        openButton?.focus();
+      };
+
+      const openMenu = () => {
+        menu?.classList.add('is-open');
+        menu?.setAttribute('aria-hidden', 'false');
+        openButton?.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('mobile-menu-open');
+        closeButton?.focus();
+      };
+
+      openButton?.addEventListener('click', openMenu);
+      closeButton?.addEventListener('click', closeMenu);
+      backdrop?.addEventListener('click', closeMenu);
+      menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu?.classList.contains('is-open')) closeMenu();
+      });
+    </script>
   </body>
 </html>
