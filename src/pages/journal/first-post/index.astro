@@ -1,0 +1,15 @@
+---
+import BlogPost from "../../../layouts/BlogPost.astro";
+import Post from "../../../content/blog/first-post.md";
+
+const { Content, frontmatter } = Post;
+---
+
+<BlogPost
+  title={frontmatter.title}
+  description={frontmatter.description}
+  pubDate={frontmatter.pubDate}
+  heroImage={frontmatter.heroImage}
+>
+  <Content />
+</BlogPost>
