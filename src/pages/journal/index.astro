@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "../../styles/global.css";
 
 const posts = Object.values(
   import.meta.glob("../content/blog/*.{md,mdx}", {
@@ -55,7 +55,7 @@ posts.sort((a, b) => {
 
                 return (
                   <article class="article-card">
-                    <a class="article-card-link" href={`/journal/${slug}/`}>
+                    <a class="article-card-link" href={`/kitclub-blog/journal/${slug}/`}>
                       {fm.heroImage && (
                         <div class="article-image-wrap">
                           <img
