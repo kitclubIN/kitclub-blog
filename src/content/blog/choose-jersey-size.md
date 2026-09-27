@@ -58,6 +58,14 @@ For a fitted football-shirt look, you may prefer a closer fit.
 
 Neither is inherently correct. The important thing is knowing what you are choosing before you order.
 
+## How KITCLUB approaches jersey sizing
+
+KITCLUB is an India-based online football jersey store, and we recommend comparing the measurements in the product size chart with a jersey you already own rather than choosing a size based only on your usual T-shirt size.
+
+Because Player and Master versions can fit differently, the version and measurements should both be considered before ordering.
+
+The aim is to make the sizing information clear enough that you can make the decision before placing your order.
+
 ## The simple rule
 
 **Do not choose a jersey size because the label looks familiar. Choose it because the measurements make sense.**
@@ -65,5 +73,3 @@ Neither is inherently correct. The important thing is knowing what you are choos
 Take a shirt you already like, measure it, and compare those numbers with the product's size chart.
 
 A few minutes before ordering can save you from a jersey that looks great but does not fit the way you expected.
-
-At KITCLUB, we want the size information to be clear enough that you can make that decision before placing your order.
