@@ -344,6 +344,37 @@ posts.sort((a, b) => {
     </footer>
 
     <script>
+      const siteHeader = document.querySelector(".site-header");
+      let lastScrollY = window.scrollY;
+      let scrollTicking = false;
+
+      function updateHeaderOnScroll() {
+        const currentScrollY = window.scrollY;
+
+        if (!siteHeader || document.body.classList.contains("mobile-menu-open")) {
+          lastScrollY = currentScrollY;
+          scrollTicking = false;
+          return;
+        }
+
+        if (currentScrollY <= 4) {
+          siteHeader.classList.remove("header-hidden");
+        } else if (currentScrollY > lastScrollY + 2) {
+          siteHeader.classList.add("header-hidden");
+        } else if (currentScrollY < lastScrollY - 1) {
+          siteHeader.classList.remove("header-hidden");
+        }
+
+        lastScrollY = currentScrollY;
+        scrollTicking = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        window.requestAnimationFrame(updateHeaderOnScroll);
+      }, { passive: true });
+
       const searchModal = document.getElementById("site-search-modal");
       const searchTrigger = document.querySelector(".search-trigger");
       const searchInput = document.getElementById("site-search-input");
