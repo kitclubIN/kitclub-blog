@@ -2137,3 +2137,128 @@ body.search-open {
     flex-basis: 60px;
   }
 }
+
+
+/* FINAL MOBILE FOOTER STRUCTURE */
+@media (max-width: 991px) {
+  .footer-inner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important;
+    grid-template-areas:
+      "shop support"
+      "legal legal"
+      "brand brand" !important;
+    column-gap: 24px !important;
+    row-gap: 40px !important;
+  }
+
+  .footer-column:nth-child(1),
+  .footer-column:nth-child(2),
+  .footer-column:nth-child(3),
+  .footer-brand {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .footer-column:nth-child(1) {
+    grid-area: shop !important;
+  }
+
+  .footer-column:nth-child(2) {
+    grid-area: support !important;
+  }
+
+  .footer-column:nth-child(3) {
+    grid-area: legal !important;
+  }
+
+  .footer-brand {
+    grid-area: brand !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .footer-column:nth-child(3) .footer-note {
+    margin-top: 28px !important;
+    width: 100%;
+  }
+
+  .footer-column:nth-child(3) .footer-payments {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+    margin-top: 28px !important;
+  }
+
+  .footer-column:nth-child(3) .footer-payments img {
+    width: 64px !important;
+    height: 40px !important;
+    flex: 0 1 64px !important;
+  }
+
+  .footer-brand .footer-socials {
+    order: 1 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    margin: 0 0 28px !important;
+  }
+
+  .footer-brand > img {
+    order: 2 !important;
+    width: min(100%, 320px) !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-brand > p {
+    order: 3 !important;
+    width: 100% !important;
+    margin: 24px 0 2px !important;
+    text-align: left !important;
+  }
+
+  .footer-brand > a {
+    order: 4 !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .footer-bottom {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important;
+    grid-template-areas:
+      "shop support"
+      "legal legal"
+      "brand brand" !important;
+    column-gap: 24px !important;
+    row-gap: 38px !important;
+  }
+
+  .footer-column a {
+    font-size: 15px !important;
+  }
+
+  .footer-column h3 {
+    font-size: 17px !important;
+  }
+
+  .footer-column:nth-child(2) a {
+    white-space: normal;
+  }
+
+  .footer-column:nth-child(3) .footer-payments img {
+    width: 60px !important;
+    height: 38px !important;
+    flex-basis: 60px !important;
+  }
+}
