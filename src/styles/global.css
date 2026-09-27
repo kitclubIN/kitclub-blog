@@ -918,11 +918,13 @@ body.search-open {
 }
 
 .footer-inner {
-  width: min(1320px, 100%);
+  width: min(1320px, calc(100% - 48px));
   margin: 0 auto;
 
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 0;
+  align-items: start;
 
   padding-bottom: 20px;
 }
@@ -931,12 +933,25 @@ body.search-open {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 0 0 180px;
   min-width: 0;
 }
 
-.footer-column + .footer-column {
-  margin-left: 40px;
+.footer-column:nth-child(1) {
+  grid-column: 1 / span 3;
+}
+
+.footer-column:nth-child(2) {
+  grid-column: 4 / span 3;
+}
+
+.footer-column:nth-child(3) {
+  grid-column: 7 / span 3;
+}
+
+.footer-brand {
+  grid-column: 10 / span 3;
+  min-width: 0;
+  width: 100%;
 }
 
 .footer-column h3 {
@@ -972,28 +987,19 @@ body.search-open {
   margin-top: 25px !important;
 }
 
-.footer-brand {
-  flex: 0 0 340px;
-  min-width: 0;
-  width: 340px;
-  max-width: 100%;
-  margin-left: auto;
-}
-
 .footer-brand img {
   display: block;
-  width: 340px;
+  width: 100%;
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  object-position: center center;
-  margin: 0 auto;
+  object-position: left center;
+  margin: 0;
 }
 
 .footer-brand p {
-  width: 340px;
-  max-width: 100%;
-  margin: 25px auto 2px;
+  width: 100%;
+  margin: 25px 0 2px;
 
   color: #111111;
   font-family: var(--body-font);
@@ -1003,10 +1009,8 @@ body.search-open {
 
 .footer-brand > a {
   display: block;
-  width: 340px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin: 0;
   color: #111111;
   font-family: var(--body-font);
   font-size: 17px;
@@ -1023,10 +1027,9 @@ body.search-open {
   display: flex;
   align-items: center;
   gap: 54px;
-  width: 340px;
-  max-width: 100%;
+  width: 100%;
   justify-content: center;
-  margin: 28px auto 0;
+  margin: 28px 0 0;
 }
 
 .footer-socials a {
@@ -1060,19 +1063,21 @@ body.search-open {
    ========================================================= */
 
 .footer-bottom {
-  width: min(1320px, 100%);
+  width: min(1320px, calc(100% - 48px));
   margin: 0 auto;
   padding-top: 0;
 
   border-top: 0;
 
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 0;
+  align-items: end;
 }
 
 .footer-bottom-left {
+  grid-column: 1 / span 5;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
