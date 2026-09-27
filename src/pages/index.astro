@@ -222,9 +222,11 @@ posts.sort((a, b) => {
             <div class="article-grid">
               {posts.map((post) => {
                 const fm = post.frontmatter ?? {};
+                const slug = post.file?.split("/").pop()?.replace(/\.(md|mdx)$/, "") ?? "";
+                const articleUrl = `/blog/${slug}/`;
                 return (
                   <article class="article-card">
-                    <a class="article-card-link" href={post.url}>
+                    <a class="article-card-link" href={articleUrl}>
                       {fm.heroImage && (
                         <div class="article-image-wrap">
                           <img
