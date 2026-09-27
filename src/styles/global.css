@@ -2302,3 +2302,57 @@ body.search-open {
     justify-content: center !important;
   }
 }
+
+
+/* =========================================================
+   FINAL MOBILE FOOTER SPACING + ODOO-STYLE SCROLL HEADER
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  transition: transform 180ms ease;
+  will-change: transform;
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 767px) {
+  .footer-inner {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "shop"
+      "support"
+      "legal"
+      "brand" !important;
+    row-gap: 0 !important;
+  }
+
+  .footer-column:nth-child(1) {
+    grid-area: shop !important;
+    margin: 0 !important;
+  }
+
+  .footer-column:nth-child(2) {
+    grid-area: support !important;
+    margin: 94px 0 0 !important;
+  }
+
+  .footer-column:nth-child(3) {
+    grid-area: legal !important;
+    margin: 70px 0 0 !important;
+  }
+
+  .footer-brand {
+    grid-area: brand !important;
+    margin: 40px 0 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-inner {
+    row-gap: 64px !important;
+  }
+}
