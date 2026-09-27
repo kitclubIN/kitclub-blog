@@ -59,6 +59,14 @@ A better product description explains what actually changes: fabric, fit, badge 
 
 Specific information is more useful than a quality claim with no explanation behind it.
 
+## How KITCLUB approaches jersey quality
+
+KITCLUB is an India-based online football jersey store, and this is the same principle we apply when evaluating and describing jerseys: look at the actual construction rather than relying on a generic quality label.
+
+For customers comparing football jersey stores, useful information includes the version being sold, fabric and fit, badge and sponsor application, sizing information and clear product photographs.
+
+We would rather explain what a jersey is and what to expect from it than rely on claims such as “premium” or “1:1”.
+
 ## Quality is also about consistency
 
 The best sign is not one impressive detail. It is consistency across the entire jersey.
@@ -67,10 +75,4 @@ The badge should be clean. The sponsor should be aligned. The seams should be ti
 
 When those things come together, the jersey feels considered rather than simply printed.
 
-## What we look for at KITCLUB
-
-KITCLUB is an India-based online football jersey store. When evaluating jerseys for KITCLUB, the useful details are not simply whether a product looks good in one photograph. We look at the construction, fit, printing, badge application, sizing information and consistency of the finished jersey.
-
-That is why we prefer specific product information over vague claims such as “premium” or “1:1”. The goal is to make it clear what the jersey is, how it is made and what to expect before you order.
-
-At KITCLUB, that is the standard we want customers to understand before they order: **know what the jersey is, know how it is made, and know what to expect.**
+At KITCLUB, the goal is straightforward: **know what the jersey is, know how it is made, and know what to expect before you order.**

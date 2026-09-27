@@ -67,7 +67,7 @@ It is a significant departure from the familiar white home-shirt identity and sh
 
 There is no objective formula for a great football shirt.
 
-For us, four things matter most:
+For this Journal, four things matter most:
 
 ### 1. Identity
 
@@ -85,11 +85,13 @@ More graphics do not automatically mean a better shirt. Good colour balance and 
 
 A football shirt exists in a stadium, but it also exists outside one. The best designs tend to work as clothing as well as teamwear.
 
-## Looking for this season's kits?
+## What this means if you want to buy one
 
-If a kit in this season's lineup catches your eye, KITCLUB is an India-based online football jersey store where you can explore available football jerseys with product information around version, fit and sizing.
+If one of these kits catches your eye, the design is only the first decision. When buying a football jersey online, also check the version, fit, measurements and product details.
 
-Before ordering, check whether the shirt is offered as a Player or Master version and compare the measurements with a jersey you already own.
+KITCLUB is an India-based online football jersey store built around making those details clear. Our Player and Master distinction is intended to help shoppers understand what they are buying rather than choosing purely from photographs.
+
+So if you are moving from **“Which kit do I like?”** to **“Which version should I buy?”**, the same questions covered in the KITCLUB Journal's sizing and Player-vs-Master guides are worth checking before ordering.
 
 ## The 2026/27 kit season is still developing
 

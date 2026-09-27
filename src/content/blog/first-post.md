@@ -49,9 +49,11 @@ A few minutes spent checking measurements can save you from choosing a version t
 
 ## How KITCLUB approaches Player and Master jerseys
 
-KITCLUB is an India-based online football jersey store. We list Player and Master versions separately so the difference is clear before you order.
+KITCLUB is an India-based online football jersey store. We use **Player Version** and **Master Version** as clear product distinctions so customers can understand what they are buying before they order.
 
-Our product information focuses on the details that matter when choosing a jersey: the version, fit, construction and available measurements. The goal is to help you choose based on what you actually want to wear rather than simply choosing the most expensive option.
+Our approach is straightforward: explain the version, fit and available measurements rather than expecting customers to work out the difference from photographs alone.
+
+That matters particularly when buying football jerseys online, where two shirts can look almost identical on a screen but fit very differently in person.
 
 ## The simple way to think about it
 
@@ -61,4 +63,4 @@ Our product information focuses on the details that matter when choosing a jerse
 
 Neither is automatically better. They are two different approaches to the same kit.
 
-At KITCLUB, we want the difference to be clear before you order — because knowing what you are buying is just as important as liking how it looks.
+At KITCLUB, the aim is to make that choice clear before you order — because knowing what you are buying is just as important as liking how it looks.

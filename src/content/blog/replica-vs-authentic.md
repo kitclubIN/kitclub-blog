@@ -67,9 +67,11 @@ Those details tell you much more about what you are buying.
 
 ## How this terminology relates to KITCLUB
 
-KITCLUB is an India-based online football jersey store. Our products are presented primarily as **Player Version** and **Master Version**, with the product information explaining the intended fit and construction.
+KITCLUB is an India-based online football jersey store. Our products are presented primarily as **Player Version** and **Master Version**, with product information explaining the intended fit and construction.
 
-Football jersey terminology can vary between sellers and markets, so checking the specific product description is more useful than relying on a single label such as “authentic” or “replica”.
+That distinction is useful because terminology varies between sellers. If you are comparing football jerseys from different stores, look beyond labels such as “replica” or “authentic” and check what the seller actually tells you about the shirt.
+
+For KITCLUB, the objective is to make the product information clear enough that you can understand the version before you buy.
 
 ## The simple way to think about it
 
