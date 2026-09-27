@@ -1,15 +1,23 @@
 ---
 import BlogPost from "../../../layouts/BlogPost.astro";
-import Post from "../../../content/blog/first-post.md";
+import { getEntry } from "astro:content";
 
-const { Content, frontmatter } = Post;
+const post = await getEntry("blog", "first-post");
+
+if (!post) {
+  throw new Error("Journal article 'first-post' was not found.");
+}
+
+const { Content } = await post.render();
+const { title, description, pubDate, updatedDate, heroImage } = post.data;
 ---
 
 <BlogPost
-  title={frontmatter.title}
-  description={frontmatter.description}
-  pubDate={frontmatter.pubDate}
-  heroImage={frontmatter.heroImage}
+  title={title}
+  description={description}
+  pubDate={pubDate}
+  updatedDate={updatedDate}
+  heroImage={heroImage?.src}
 >
   <Content />
 </BlogPost>
