@@ -2262,3 +2262,43 @@ body.search-open {
     flex-basis: 60px !important;
   }
 }
+
+
+/* Match the mobile footer reference: single-column stack at mobile width */
+@media (max-width: 767px) {
+  .footer-inner {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "shop"
+      "support"
+      "legal"
+      "brand" !important;
+    row-gap: 96px !important;
+    column-gap: 0 !important;
+  }
+
+  .footer-column:nth-child(1) {
+    grid-area: shop !important;
+  }
+
+  .footer-column:nth-child(2) {
+    grid-area: support !important;
+  }
+
+  .footer-column:nth-child(3) {
+    grid-area: legal !important;
+  }
+
+  .footer-brand {
+    grid-area: brand !important;
+  }
+
+  .footer-column:nth-child(3) .footer-note {
+    margin-top: 28px !important;
+  }
+
+  .footer-column:nth-child(3) .footer-payments {
+    justify-content: center !important;
+  }
+}
