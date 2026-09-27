@@ -92,6 +92,18 @@ posts.sort((a, b) => {
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
 
+            <button
+              class="mobile-menu-trigger"
+              type="button"
+              aria-label="Open menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
             <div class="account-wrap">
               <a
                 class="account-sign-in"
@@ -126,6 +138,41 @@ posts.sort((a, b) => {
         </div>
       </nav>
     </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-backdrop" data-mobile-menu-close></div>
+      <aside class="mobile-menu-drawer" aria-label="Mobile navigation">
+        <div class="mobile-menu-top">
+          <button class="mobile-menu-close" type="button" aria-label="Close menu" data-mobile-menu-close>
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <div class="mobile-menu-search">
+            <input id="mobile-menu-search-input" type="search" placeholder="Search..." aria-label="Search KITCLUB" />
+            <button type="button" aria-label="Search" id="mobile-menu-search-button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <nav class="mobile-menu-links" aria-label="Mobile navigation links">
+          <a href="https://www.kitclub.in/shop">Shop All</a>
+          <a href="https://www.kitclub.in/shop">Shop By club <span>›</span></a>
+          <a href="https://www.kitclub.in/shop">Shop By Country <span>›</span></a>
+          <a href="https://www.kitclub.in/contactus">Contact Us</a>
+        </nav>
+
+        <div class="mobile-menu-socials">
+          <a href="https://chat.whatsapp.com/F7knZUObUaGFBvZosMC4Cu" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/kitclub.in/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <a class="mobile-menu-signin" href="https://www.kitclub.in/web/login?redirect=/journal/">Sign in</a>
+      </aside>
+    </div>
 
     <div class="search-modal" id="site-search-modal" aria-hidden="true">
       <div class="search-modal-backdrop" data-search-close></div>
@@ -479,6 +526,40 @@ posts.sort((a, b) => {
         }
       });
 
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuTrigger = document.querySelector(".mobile-menu-trigger");
+      const mobileMenuSearchInput = document.getElementById("mobile-menu-search-input");
+      const mobileMenuSearchButton = document.getElementById("mobile-menu-search-button");
+
+      function setMobileMenuOpen(open) {
+        if (!mobileMenu || !mobileMenuTrigger) return;
+        mobileMenu.classList.toggle("is-open", open);
+        mobileMenu.setAttribute("aria-hidden", String(!open));
+        mobileMenuTrigger.setAttribute("aria-expanded", String(open));
+        document.body.classList.toggle("mobile-menu-open", open);
+        if (open) {
+          window.setTimeout(() => mobileMenuSearchInput?.focus(), 80);
+        }
+      }
+
+      mobileMenuTrigger?.addEventListener("click", () => setMobileMenuOpen(true));
+      mobileMenu?.querySelectorAll("[data-mobile-menu-close]").forEach((element) => {
+        element.addEventListener("click", () => setMobileMenuOpen(false));
+      });
+
+      mobileMenuSearchButton?.addEventListener("click", () => {
+        const term = mobileMenuSearchInput?.value.trim();
+        if (term) window.location.href = `https://www.kitclub.in/website/search/all?search=${encodeURIComponent(term)}`;
+      });
+
+      mobileMenuSearchInput?.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          const term = mobileMenuSearchInput.value.trim();
+          if (term) window.location.href = `https://www.kitclub.in/website/search/all?search=${encodeURIComponent(term)}`;
+        }
+      });
+
       searchTrigger?.addEventListener("click", () => setSearchOpen(true));
       searchModal?.querySelectorAll("[data-search-close]").forEach((element) => {
         element.addEventListener("click", () => setSearchOpen(false));
@@ -487,6 +568,7 @@ posts.sort((a, b) => {
       document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
           setSearchOpen(false);
+          setMobileMenuOpen(false);
           accountWrap?.classList.remove("is-open");
           accountTrigger?.setAttribute("aria-expanded", "false");
         }
