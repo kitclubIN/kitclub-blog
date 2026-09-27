@@ -17,6 +17,8 @@ const {
   category = "Football Culture",
 } = Astro.props;
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const formatDate = (value?: Date | string) => {
   if (!value) return "";
   const date = value instanceof Date ? value : new Date(value);
