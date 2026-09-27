@@ -3,7 +3,9 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import "../../styles/global.css";
 
-const journalBase = import.meta.env.BASE_URL;\n\nconst posts = (await getCollection("blog")).sort(
+const journalBase = import.meta.env.BASE_URL;
+
+const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
