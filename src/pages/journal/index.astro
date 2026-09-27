@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import "../../styles/global.css";
 
-const posts = (await getCollection("blog")).sort(
+const journalBase = import.meta.env.BASE_URL;\n\nconst posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
@@ -45,7 +45,7 @@ const posts = (await getCollection("blog")).sort(
                 <article class="article-card">
                   <a
                     class="article-card-link"
-                    href={`/kitclub-blog/journal/${post.id}/`}
+                    href={`${journalBase}journal/${post.id}/`}
                   >
                     {post.data.heroImage && (
                       <div class="article-image-wrap">
