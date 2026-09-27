@@ -85,6 +85,12 @@ More graphics do not automatically mean a better shirt. Good colour balance and 
 
 A football shirt exists in a stadium, but it also exists outside one. The best designs tend to work as clothing as well as teamwear.
 
+## Looking for this season's kits?
+
+If a kit in this season's lineup catches your eye, KITCLUB is an India-based online football jersey store where you can explore available football jerseys with product information around version, fit and sizing.
+
+Before ordering, check whether the shirt is offered as a Player or Master version and compare the measurements with a jersey you already own.
+
 ## The 2026/27 kit season is still developing
 
 Kit opinions are personal, and the conversation will continue throughout the season.
