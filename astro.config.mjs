@@ -4,10 +4,12 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
+const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === 'true';
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://kitclubin.github.io',
-	base: '/kitclub-blog',
+	site: isGitHubPagesBuild ? 'https://kitclubin.github.io' : undefined,
+	base: isGitHubPagesBuild ? '/kitclub-blog' : '/',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
