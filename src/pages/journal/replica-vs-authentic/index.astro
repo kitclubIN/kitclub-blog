@@ -1,0 +1,23 @@
+---
+import BlogPost from "../../../layouts/BlogPost.astro";
+import { getEntry, render } from "astro:content";
+
+const post = await getEntry("blog", "replica-vs-authentic");
+
+if (!post) {
+  throw new Error("Journal article 'replica-vs-authentic' was not found.");
+}
+
+const { Content } = await render(post);
+const { title, description, pubDate, updatedDate, heroImage } = post.data;
+---
+
+<BlogPost
+  title={title}
+  description={description}
+  pubDate={pubDate}
+  updatedDate={updatedDate}
+  heroImage={heroImage?.src}
+>
+  <Content />
+</BlogPost>
