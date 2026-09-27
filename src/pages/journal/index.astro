@@ -1,18 +1,11 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import "../../styles/global.css";
 
-const posts = Object.values(
-  import.meta.glob("../content/blog/*.{md,mdx}", {
-    eager: true,
-    import: "default",
-  })
-) as any[];
-
-posts.sort((a, b) => {
-  const dateA = new Date(a.frontmatter?.pubDate ?? 0).getTime();
-  const dateB = new Date(b.frontmatter?.pubDate ?? 0).getTime();
-  return dateB - dateA;
-});
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <!doctype html>
@@ -48,48 +41,43 @@ posts.sort((a, b) => {
 
           {posts.length > 0 ? (
             <div class="article-grid">
-              {posts.map((post) => {
-                const fm = post.frontmatter ?? {};
-                const slug =
-                  post.file?.split("/").pop()?.replace(/\.(md|mdx)$/, "") ?? "";
-
-                return (
-                  <article class="article-card">
-                    <a class="article-card-link" href={`/kitclub-blog/journal/${slug}/`}>
-                      {fm.heroImage && (
-                        <div class="article-image-wrap">
-                          <img
-                            class="article-image"
-                            src={fm.heroImage}
-                            alt={fm.title ?? "KITCLUB Journal article"}
-                            loading="lazy"
-                          />
-                        </div>
-                      )}
-
-                      <div class="article-content">
-                        {fm.pubDate && (
-                          <p class="article-date">
-                            {new Date(fm.pubDate).toLocaleDateString("en-IN", {
-                              day: "numeric",
-                              month: "long",
-                              year: "numeric",
-                            })}
-                          </p>
-                        )}
-
-                        <h3>{fm.title ?? "KITCLUB Journal"}</h3>
-
-                        {fm.description && (
-                          <p class="article-description">{fm.description}</p>
-                        )}
-
-                        <span class="read-more">Read article →</span>
+              {posts.map((post) => (
+                <article class="article-card">
+                  <a
+                    class="article-card-link"
+                    href={`/kitclub-blog/journal/${post.id}/`}
+                  >
+                    {post.data.heroImage && (
+                      <div class="article-image-wrap">
+                        <Image
+                          class="article-image"
+                          src={post.data.heroImage}
+                          alt={post.data.title}
+                          loading="lazy"
+                        />
                       </div>
-                    </a>
-                  </article>
-                );
-              })}
+                    )}
+
+                    <div class="article-content">
+                      <p class="article-date">
+                        {post.data.pubDate.toLocaleDateString("en-IN", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })}
+                      </p>
+
+                      <h3>{post.data.title}</h3>
+
+                      <p class="article-description">
+                        {post.data.description}
+                      </p>
+
+                      <span class="read-more">Read article →</span>
+                    </div>
+                  </a>
+                </article>
+              ))}
             </div>
           ) : (
             <p>No articles yet.</p>
