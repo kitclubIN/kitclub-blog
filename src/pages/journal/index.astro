@@ -1,0 +1,101 @@
+---
+import "../styles/global.css";
+
+const posts = Object.values(
+  import.meta.glob("../content/blog/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  })
+) as any[];
+
+posts.sort((a, b) => {
+  const dateA = new Date(a.frontmatter?.pubDate ?? 0).getTime();
+  const dateB = new Date(b.frontmatter?.pubDate ?? 0).getTime();
+  return dateB - dateA;
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The KITCLUB Journal — football shirts, football culture, kit history and stories from the world of the beautiful game."
+    />
+    <title>KITCLUB Journal — Football Shirts &amp; Culture</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="journal-hero">
+        <div class="journal-hero-inner">
+          <p class="journal-eyebrow">KITCLUB JOURNAL</p>
+          <h1>Football shirts. Stories. Culture.</h1>
+          <p class="journal-intro">
+            A closer look at the kits, players, clubs and moments that make football
+            more than just a game.
+          </p>
+        </div>
+      </section>
+
+      <section class="articles-section">
+        <div class="articles-inner">
+          <div class="section-heading">
+            <h2>Latest from the Journal</h2>
+          </div>
+
+          {posts.length > 0 ? (
+            <div class="article-grid">
+              {posts.map((post) => {
+                const fm = post.frontmatter ?? {};
+                const slug =
+                  post.file?.split("/").pop()?.replace(/\.(md|mdx)$/, "") ?? "";
+
+                return (
+                  <article class="article-card">
+                    <a class="article-card-link" href={`/journal/${slug}/`}>
+                      {fm.heroImage && (
+                        <div class="article-image-wrap">
+                          <img
+                            class="article-image"
+                            src={fm.heroImage}
+                            alt={fm.title ?? "KITCLUB Journal article"}
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+
+                      <div class="article-content">
+                        {fm.pubDate && (
+                          <p class="article-date">
+                            {new Date(fm.pubDate).toLocaleDateString("en-IN", {
+                              day: "numeric",
+                              month: "long",
+                              year: "numeric",
+                            })}
+                          </p>
+                        )}
+
+                        <h3>{fm.title ?? "KITCLUB Journal"}</h3>
+
+                        {fm.description && (
+                          <p class="article-description">{fm.description}</p>
+                        )}
+
+                        <span class="read-more">Read article →</span>
+                      </div>
+                    </a>
+                  </article>
+                );
+              })}
+            </div>
+          ) : (
+            <p>No articles yet.</p>
+          )}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
