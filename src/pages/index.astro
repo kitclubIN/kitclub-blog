@@ -2,7 +2,7 @@
 import "../styles/global.css";
 
 const posts = Object.values(
-  import.meta.glob("../../content/blog/*.{md,mdx}", {
+  import.meta.glob("../content/blog/*.{md,mdx}", {
     eager: true,
     import: "default",
   })
