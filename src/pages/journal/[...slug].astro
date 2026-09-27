@@ -1,39 +1,27 @@
 ---
 import BlogPost from "../../layouts/BlogPost.astro";
+import { getCollection } from "astro:content";
 
-const posts = import.meta.glob("../../content/blog/*.{md,mdx}", {
-  eager: true,
-});
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
 
-const entries = Object.entries(posts);
-
-export function getStaticPaths() {
-  return entries.map(([path, module]: [string, any]) => {
-    const slug = path
-      .split("/")
-      .pop()
-      ?.replace(/\.(md|mdx)$/, "");
-
-    return {
-      params: { slug },
-      props: {
-        frontmatter: module.frontmatter,
-        Content: module.default,
-      },
-    };
-  });
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
 }
 
-const { frontmatter, Content } = Astro.props;
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { title, description, pubDate, updatedDate, heroImage } = post.data;
 ---
 
 <BlogPost
-  title={frontmatter.title}
-  description={frontmatter.description}
-  pubDate={frontmatter.pubDate}
-  updatedDate={frontmatter.updatedDate}
-  heroImage={frontmatter.heroImage}
-  category={frontmatter.category}
+  title={title}
+  description={description}
+  pubDate={pubDate}
+  updatedDate={updatedDate}
+  heroImage={heroImage}
 >
   <Content />
 </BlogPost>
