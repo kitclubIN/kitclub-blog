@@ -1,0 +1,39 @@
+---
+import BlogPost from "../../layouts/BlogPost.astro";
+
+const posts = import.meta.glob("../../content/blog/*.{md,mdx}", {
+  eager: true,
+});
+
+const entries = Object.entries(posts);
+
+export function getStaticPaths() {
+  return entries.map(([path, module]: [string, any]) => {
+    const slug = path
+      .split("/")
+      .pop()
+      ?.replace(/\.(md|mdx)$/, "");
+
+    return {
+      params: { slug },
+      props: {
+        frontmatter: module.frontmatter,
+        Content: module.default,
+      },
+    };
+  });
+}
+
+const { frontmatter, Content } = Astro.props;
+---
+
+<BlogPost
+  title={frontmatter.title}
+  description={frontmatter.description}
+  pubDate={frontmatter.pubDate}
+  updatedDate={frontmatter.updatedDate}
+  heroImage={frontmatter.heroImage}
+  category={frontmatter.category}
+>
+  <Content />
+</BlogPost>
