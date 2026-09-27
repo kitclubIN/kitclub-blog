@@ -1749,17 +1749,33 @@ body.search-open {
   }
 
   .footer-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "shop support"
+      "legal legal"
+      "brand brand";
+    column-gap: 18px;
+    row-gap: 34px;
   }
 
-  .footer-column:nth-child(1),
-  .footer-column:nth-child(2),
+  .footer-column:nth-child(1) {
+    grid-area: shop;
+  }
+
+  .footer-column:nth-child(2) {
+    grid-area: support;
+  }
+
   .footer-column:nth-child(3) {
-    grid-column: 1;
+    grid-area: legal;
+  }
+
+  .footer-brand {
+    grid-area: brand;
   }
 
   .footer-brand img {
-    width: 230px;
+    width: min(100%, 320px);
   }
 }
 
