@@ -47,6 +47,23 @@ Before ordering, compare the measurements in the size chart with a shirt you alr
 
 A few minutes spent checking measurements can save you from choosing a version that simply does not feel right.
 
+
+## Why Fan and Master Can Mean Different Things
+
+There is another source of confusion when shopping for football jerseys: **the names used by sellers are not always standardized**.
+
+In the official football-shirt market, terms such as Player, Stadium or Fan can describe different product designs from a brand. In the replica market, however, sellers and manufacturers may use their own terminology for different versions or grades of a jersey.
+
+That is why you may see one seller call a shirt **Fan Version** while another calls a very similar type of shirt **Master Version**. The word itself does not tell you everything about the product.
+
+There can also be differences between products carrying the same label. Manufacturers can produce multiple grades, and different sellers may source from different manufacturers. Two jerseys both described as “Master” therefore should not automatically be assumed to have identical fabric, construction or finishing.
+
+**The useful question is not just “Is this Fan or Master?”**
+
+Look at what the jersey actually offers: the fit, fabric, badge and sponsor application, printing, construction, measurements and the product photographs.
+
+This is also why we avoid treating the name alone as a guarantee of quality at KITCLUB. The version label is useful, but the actual product details are what help you understand what you are buying.
+
 ## How KITCLUB approaches Player and Master jerseys
 
 KITCLUB is an India-based online football jersey store. We use **Player Version** and **Master Version** as clear product distinctions so customers can understand what they are buying before they order.
