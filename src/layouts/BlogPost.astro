@@ -31,23 +31,7 @@ const formatDate = (value?: Date | string) => {
     year: "numeric",
   }).format(date);
 };
----
 import "../styles/global.css";
-
-const baseUrl = import.meta.env.BASE_URL;
-
-const formatDate = (value?: Date | string) => {
-  if (!value) return "";
-  const date = value instanceof Date ? value : new Date(value);
-  if (Number.isNaN(date.getTime())) return String(value);
-
-  return new Intl.DateTimeFormat("en-IN", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(date);
-};
----
 
 <!doctype html>
 <html lang="en">
