@@ -18,7 +18,7 @@ const posts = (await getCollection("blog")).sort(
       content="The KITCLUB Journal — football shirts, football culture, kit history and stories from the world of the beautiful game."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.kitclub.in/journal/" />
+    <link rel="canonical" href="https://www.kitclub.in/" />
     <title>KITCLUB Journal — Football Shirts & Culture</title>
   </head>
 
@@ -100,7 +100,7 @@ const posts = (await getCollection("blog")).sort(
             <div class="account-wrap">
               <a
                 class="account-sign-in"
-                href="https://www.kitclub.in/web/login?redirect=/journal/"
+                href="https://www.kitclub.in/web/login?redirect=/"
               >
                 Sign in
               </a>
@@ -161,7 +161,7 @@ const posts = (await getCollection("blog")).sort(
           </a>
         </div>
 
-        <a class="mobile-menu-signin" href="https://www.kitclub.in/web/login?redirect=/journal/">Sign in</a>
+        <a class="mobile-menu-signin" href="https://www.kitclub.in/web/login?redirect=/">Sign in</a>
       </aside>
     </div>
 
@@ -217,7 +217,7 @@ const posts = (await getCollection("blog")).sort(
                 <article class="article-card">
                   <a
                     class="article-card-link"
-                    href={`${import.meta.env.BASE_URL}journal/${post.id}/`}
+                    href={`${import.meta.env.BASE_URL}${post.id}/`}
                   >
                     {post.data.heroImage && (
                       <div class="article-image-wrap">
