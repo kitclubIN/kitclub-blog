@@ -122,7 +122,7 @@ import "../styles/global.css";
             <div class="account-wrap">
               <a
                 class="account-sign-in"
-                href="https://www.kitclub.in/web/login?redirect=/journal/"
+                href="https://www.kitclub.in/web/login?redirect=/"
               >
                 Sign in
               </a>
@@ -183,7 +183,7 @@ import "../styles/global.css";
           </a>
         </div>
 
-        <a class="mobile-menu-signin" href="https://www.kitclub.in/web/login?redirect=/journal/">Sign in</a>
+        <a class="mobile-menu-signin" href="https://www.kitclub.in/web/login?redirect=/">Sign in</a>
       </aside>
     </div>
 
@@ -219,7 +219,7 @@ import "../styles/global.css";
     <main class="article-page">
       <header class="article-header">
         <div class="article-container">
-          <a href={`${baseUrl}journal/`} class="article-back">Back to Journal</a>
+          <a href={`${baseUrl}`} class="article-back">Back to Journal</a>
           <div class="article-category">{category}</div>
           <h1>{title}</h1>
           {description && <p class="article-dek">{description}</p>}
