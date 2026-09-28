@@ -6,8 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://kitclubin.github.io',
-	base: '/',
+	site: 'https://kitclubin.github.io/kitclub-blog',
+	base: '/kitclub-blog/',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
