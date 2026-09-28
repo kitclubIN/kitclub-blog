@@ -63,5 +63,4 @@ collections:
           - quote
           - bulleted-list
           - numbered-list
-          - table
         editor_components: []
