@@ -2,6 +2,8 @@ backend:
   name: github
   repo: kitclubIN/kitclub-blog
   branch: main
+  base_url: https://kitclub-decap-oauth.noel-e8a.workers.dev
+  auth_endpoint: auth
 
 site_url: https://kitclubin.github.io/kitclub-blog
 display_url: https://kitclubin.github.io/kitclub-blog
