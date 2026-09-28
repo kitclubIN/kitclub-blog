@@ -25,9 +25,24 @@ Player jerseys are generally closer to the body, especially around the chest, sh
 
 The Master Version is designed with everyday wear in mind.
 
-It generally has a more relaxed fit and a construction that is easier to wear casually. The details and overall appearance are still built to replicate the official kit, but the priorities are different from the performance-focused Player Version.
+It generally has a more relaxed fit and a construction that is easier to wear casually. Compared with a Player Version, the material is typically less focused on achieving the lightest possible match-day construction and more focused on comfortable everyday use.
 
-For most people buying a jersey to wear regularly, comfort and fit matter more than having the exact on-pitch construction.
+The way the club badge, sponsor and other logos are applied can also differ. Depending on the specific jersey and manufacturer, you may see **embroidered, stitched or heat-applied details**. A Master/Fan-style jersey is not automatically lower quality simply because it uses an embroidered badge, and a heat-pressed badge is not automatically a sign that a jersey is better.
+
+The important point is that **materials and logo application can vary from one manufacturer or product grade to another**. The name “Master” or “Fan” alone does not tell you exactly how every detail of the jersey has been made.
+
+## Player vs Master: Material, Fit and Logo Details
+
+The easiest way to understand the difference is to look at what each version is designed to prioritize.
+
+| | Player Version | Master / Fan-style Version |
+|---|---|---|
+| **Fit** | Closer, athletic fit | More relaxed everyday fit |
+| **Material** | Usually lighter and more performance-oriented | Usually more focused on everyday comfort and durability |
+| **Badges & logos** | Often heat-applied or otherwise lightweight | Can be embroidered, stitched or heat-applied depending on the product |
+| **Construction** | Designed around the performance-style shirt | Designed around supporter/everyday use |
+
+These are useful general distinctions, not guarantees for every jersey. Different clubs, seasons and manufacturers can use different materials and applications.
 
 ## Which one should you choose?
 
