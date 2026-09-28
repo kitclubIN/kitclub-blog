@@ -1,0 +1,65 @@
+backend:
+  name: github
+  repo: kitclubIN/kitclub-blog
+  branch: main
+
+site_url: https://kitclubin.github.io/kitclub-blog
+display_url: https://kitclubin.github.io/kitclub-blog
+
+media_folder: src/assets/blog
+public_folder: /assets/blog
+
+collections:
+  - name: blog
+    label: Journal Articles
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    format: frontmatter
+    extension: md
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Description
+        name: description
+        widget: text
+
+      - label: Published Date
+        name: pubDate
+        widget: datetime
+        date_format: "MMM D YYYY"
+        time_format: false
+        format: "MMM D YYYY"
+
+      - label: Updated Date
+        name: updatedDate
+        widget: datetime
+        required: false
+        date_format: "MMM D YYYY"
+        time_format: false
+        format: "MMM D YYYY"
+
+      - label: Hero Image
+        name: heroImage
+        widget: image
+        required: false
+
+      - label: Article
+        name: body
+        widget: markdown
+        modes:
+          - rich_text
+          - raw
+        buttons:
+          - bold
+          - italic
+          - link
+          - heading-two
+          - heading-three
+          - quote
+          - bulleted-list
+          - numbered-list
+          - table
+        editor_components: []
