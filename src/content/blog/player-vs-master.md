@@ -15,7 +15,7 @@ The short answer: **they are made with different priorities.**
 
 The Player Version is designed around the shirt worn by professional players on the pitch.
 
-That usually means a more athletic fit, lighter construction and technical details intended to help with movement and ventilation. Depending on the club and season, you may also see details such as heat-applied badges, lightweight panels or a different fabric construction.
+That usually means a more athletic fit, lighter construction and technical details intended to help with movement and ventilation. As a general rule, Player Versions use **heat-pressed rubberised club badges, sponsors and other logos**, along with lightweight technical construction. Depending on the club, season and manufacturer, there can be exceptions to this general rule.
 
 The fit is the part you will notice most.
 
@@ -27,7 +27,7 @@ The Master Version is designed with everyday wear in mind.
 
 It generally has a more relaxed fit and a construction that is easier to wear casually. Compared with a Player Version, the material is typically less focused on achieving the lightest possible match-day construction and more focused on comfortable everyday use.
 
-The way the club badge, sponsor and other logos are applied can also differ. Depending on the specific jersey and manufacturer, you may see **embroidered, stitched or heat-applied details**. A Master/Fan-style jersey is not automatically lower quality simply because it uses an embroidered badge, and a heat-pressed badge is not automatically a sign that a jersey is better.
+The usual Master Version approach is different: **club badges, sponsors and other logos are generally embroidered or stitched**, giving the shirt a more traditional supporter-style finish. This is a general rule rather than an absolute rule, and specific clubs, seasons and manufacturers can have exceptions.
 
 The important point is that **materials and logo application can vary from one manufacturer or product grade to another**. The name “Master” or “Fan” alone does not tell you exactly how every detail of the jersey has been made.
 
@@ -39,10 +39,10 @@ The easiest way to understand the difference is to look at what each version is 
 |---|---|---|
 | **Fit** | Closer, athletic fit | More relaxed everyday fit |
 | **Material** | Usually lighter and more performance-oriented | Usually more focused on everyday comfort and durability |
-| **Badges & logos** | Often heat-applied or otherwise lightweight | Can be embroidered, stitched or heat-applied depending on the product |
+| **Badges & logos** | Generally heat-pressed and rubberised | Generally embroidered or stitched |
 | **Construction** | Designed around the performance-style shirt | Designed around supporter/everyday use |
 
-These are useful general distinctions, not guarantees for every jersey. Different clubs, seasons and manufacturers can use different materials and applications.
+These are general distinctions, not guarantees for every jersey. Different clubs, seasons and manufacturers can have exceptions and may use different materials or applications.
 
 ## Which one should you choose?
 
